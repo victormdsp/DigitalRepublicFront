@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Digital Republic Teste
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<section>
+  <h2>Contextualização</h2>
+    <p> Resolução do desafio proposto pela empresa Digital Republic em desenvolver um projeto Full-Stack. </p>
+    <p> Este repositório se baseia no Front-End do desafio. </p>
+    <p> Ao acessar a página você verá duas propostas de versões , cada uma foi feita para um back-end feito também proposto pelo desafio, os links para os backends estarão no final deste README. </p>
+</section>
 
-## Available Scripts
+<section>
+   <h2>Tecnologias utilizadas</h2>
+    <ul>
+      <li>ReactJs > 14</li>
+      <li>MaterialUI</li>
+    </ul>
+    
+    <p> Para rodar o código primeiramente é necessário utilizar o comando "npm i" para instalar as dependências e em seguida utilizar o comando "npm run start".</p>
+    <p> OBS: NodeJS necessário ser maior que 14 </p>
+    <p> Foi utilizado o Visual Studio Code para o desenvolvimento de todo o código. </p>
+</section>
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<section>
+  <h3> Organização das pastas </h3>
+  <img src="./src/images/pastas.png">
+  <p> Como podemos ver na imagem acima , possuímos a pasta src e dentro dela temos a pasta "pages" onde ficam as páginas e os componentes, o arquivo app que é o ponto inicial da aplicaçãoe o arquivo de "routes.js" onde ficam todas as rotas da aplicação.</p>
+  
+  <h2>Pasta componentes</h2>
+  <section>
+    <p>Nesta pasta se encontram os cmoponentes reutilizáveis, ou seja componentes que servem como alguma funcionalidade ou sessão de uma página, eles são:</p>
+    <ul>
+      <li>Footer</li>
+      <li>Header</li>
+      <li>LoggedAccount</li>
+      <li>Main</li>
+      <li>Modal</li>
+    </ul>
+  </section>
+  
+  <h2>Pastas de páginas</h2>
+  <section>
+    <p>As pastas de páginas , são aquelas onde seus componentes montam uma página inteira, elas são:</p>
+    <ul>
+      <li>Account</li>
+      <li>DigitalOne</li>
+      <li>DIgitalTwo</li>
+      <li>Home</li>
+    </ul>
+  </section>
+  
+   <h2>Arquivo de rotas</h2>
+   <section>
+    <p>O arquivo de rotas serve para setarmos todas as rotas da nossa aplicação como mostrado na imagem abaixo: </p>
+    <img src="./src/images/rotas.png">
+    <p>Foi utilizado o "react-router-dom" para a criação e funcionamento de todas as rotas.</p>
+  </section>
+  
+  <section>
+    <p>Back-End primeira versão: </p>
+      https://github.com/victormdsp/DigitalRepublic
+    <p>Back-End segunda versão: </p>
+      https://github.com/victormdsp/DigitalRepublic2
+  </sectio>
