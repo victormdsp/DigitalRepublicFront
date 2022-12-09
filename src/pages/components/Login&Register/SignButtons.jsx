@@ -15,7 +15,7 @@ export default function SignButtons() {
     const navigate = useNavigate(); //Navegação
 
     //Variáveis de login
-    const [login, setLogin] = useState(false) //Setando variável
+    const [login, setLogin] = useState() //Setando variável
     const [loginInfos, setLoginInfos] = useState(); //Seta as informações de login
 
     //Variáveis de registro
@@ -30,7 +30,7 @@ export default function SignButtons() {
 
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 "cpf": registerInfos.cpf,
                 "name": registerInfos.name,
@@ -48,7 +48,7 @@ export default function SignButtons() {
         }
 
         console.log(data);
-        navigate('/Account', {state: {data: data}});
+        navigate('/Account', { state: { data: data } });
 
     }
 
@@ -65,7 +65,11 @@ export default function SignButtons() {
             })
         }
 
-        const response = await fetch('http://localhost:3001/login', requestOptions);
+        const response = await fetch('http://localhost:3001/login', requestOptions)
+            .catch(() => {
+                setLogin('error')
+            });
+
         const data = await response.json();
         if (data.message) {
             setLogin(true);
@@ -96,15 +100,15 @@ export default function SignButtons() {
                     <h1>Bem-vindo/a, faça seu cadastro para criar uma conta em nosso banco!</h1>
                     <form onSubmit={event => handleRegister(event)}>
                         <label htmlFor="">Nome</label>
-                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, name: event.target.value})}/>
+                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, name: event.target.value })} />
                         <label htmlFor="">Sobrenome</label>
-                        <input type="text" onChange={event => setRegisterInfos({ ...registerInfos, lasName: event.target.value})}/>
+                        <input type="text" onChange={event => setRegisterInfos({ ...registerInfos, lasName: event.target.value })} />
                         <label htmlFor="">Sobrenome do Meio</label>
-                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, midName: event.target.value})}/>
+                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, midName: event.target.value })} />
                         <label htmlFor="">CPF</label>
-                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, cpf: event.target.value})}/>
+                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, cpf: event.target.value })} />
                         <label htmlFor="">Senha</label>
-                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, password: event.target.value})}/>
+                        <input required type="text" onChange={event => setRegisterInfos({ ...registerInfos, password: event.target.value })} />
                         <input type="submit" className="submitButton defaultButton" />
                         {register ? submitError('Algo deu errado , verifique as informações inseridas!') : null}
                     </form>
@@ -123,7 +127,8 @@ export default function SignButtons() {
                         <label htmlFor="">Senha</label>
                         <input required type="text" onChange={event => setLoginInfos({ ...loginInfos, password: event.target.value })} />
                         <input disabled={verifyInfosLogin()} type="submit" className="submitButton defaultButton" />
-                        {login ? submitError('CPF ou Senha incorreta!') : null}
+                        {login == true ? submitError('CPF ou Senha incorreta!')
+                            : login == "error" ? submitError('Houve um erro ao tentar logar, tente novamente mais tarde.') : null}
                     </form>
                 </Box>}
                 text={"Login"}>
