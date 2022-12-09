@@ -13,7 +13,6 @@
       <li>ReactJs > 14</li>
       <li>MaterialUI</li>
     </ul>
-    
     <p> Para rodar o código primeiramente é necessário utilizar o comando "npm i" para instalar as dependências e em seguida utilizar o comando "npm run start".</p>
     <p> OBS: NodeJS necessário ser maior que 14 </p>
     <p> Foi utilizado o Visual Studio Code para o desenvolvimento de todo o código. </p>
