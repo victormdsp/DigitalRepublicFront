@@ -54,6 +54,6 @@
   </section>
   
   <section>
-    <p>Back-End primeira versão: </p> https://github.com/victormdsp/DigitalRepublic
-    <p>Back-End segunda versão: </p> https://github.com/victormdsp/DigitalRepublic2
+    <p>Back-End primeira versão: <br> https://github.com/victormdsp/DigitalRepublic </p>
+    <p>Back-End segunda versão: <br> https://github.com/victormdsp/DigitalRepublic2 </p>
   </sectio>
