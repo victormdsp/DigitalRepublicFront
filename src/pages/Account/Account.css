@@ -1,0 +1,31 @@
+#accountBody{
+    flex-direction: column;
+    height: 43.7em;
+}
+
+#saldo{
+    word-spacing: 5px;
+}
+
+#eyeImage{
+    width: 40px;
+    height: auto;
+    margin-left: .5em;
+
+    cursor: pointer;
+}
+
+#eyeImage:hover{
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+#operacoes{
+    display: contents;
+}
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

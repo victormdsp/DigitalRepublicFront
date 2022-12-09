@@ -1,0 +1,33 @@
+#homeBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 50vh;
+}
+
+#homeBody > h1{
+    font-size: 25px;
+}
+
+.rota{
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+    margin: 1em;
+    padding: .1em .3em;
+    
+    border: 3px solid #eee;
+    background-color: #eee;
+
+    color: #ff6000;
+    text-decoration: none;
+}
+
+.rota:hover{
+    border: 3px solid #ff6000;
+    background-color: #ff6000;
+
+    color: white;
+    transition: .2s;
+}

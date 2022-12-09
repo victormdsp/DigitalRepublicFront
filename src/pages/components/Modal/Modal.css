@@ -1,0 +1,30 @@
+#modalBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalButton{
+    border-radius: 7px;
+    color: #fff;
+    margin: .5em;
+    background-color: #00aff1;
+    font-weight: bold;
+}
+
+#modalButton:hover{
+    background-color: #fff;
+    color: #00aff1;
+    transition: .2s;
+}
+
+#modalClose {
+    position: fixed;
+    right: 41%;
+    color: #fff;
+}
+
+#modalClose:hover{
+    transform: scale(1.2);
+    transition: .2s;
+}

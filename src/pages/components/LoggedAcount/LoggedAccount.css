@@ -1,0 +1,16 @@
+#loggedBody{
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#userImage{
+    width: 70px;
+    height: auto;
+}
+
+#logoutButton{
+    margin-right: 1em;
+    font-weight: bold;
+    color: white;
+}
